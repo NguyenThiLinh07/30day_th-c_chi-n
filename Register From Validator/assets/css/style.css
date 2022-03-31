@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --success-color: #2691d9;
+    --error-color: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(120deg, #3ca7ee, #9b408f);
+    font-family: 'Poppins';
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    border: none;
+    outline: none;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.from-control {
+    position: relative;
+    margin-top: 40px;
+}
+
+.from-control input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    border-bottom: 2px solid #adadad;
+}
+
+.from-control span {
+    position: absolute;
+    border-bottom: 3px solid var(--success-color);
+    width: 0%;
+    left: 0;
+    top: 38px;
+    transition: 0.3s;
+}
+
+.from-control input:focus ~ span {
+    width: 100%;
+}
+
+.from-control.error small {
+    color: var(--error-color);
+}
+
+.from-control.error input {
+    border-bottom: 2px solid var(--error-color);
+}
+
+.btn-submit {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background-color: var(--success-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-submit:hover {
+    background-color: #08609a;
+}
+
+.signup-link {
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: none;
+    color: var(--success-color);
+    cursor: pointer;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
